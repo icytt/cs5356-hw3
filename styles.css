@@ -1,10 +1,10 @@
 /* Basic global styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
+    line-height: 2;
+    margin: 6;
+    padding: 20;
+    background: #70c2d5;
 }
 
 .container {
