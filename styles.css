@@ -8,8 +8,8 @@ body {
 }
 
 .container {
-    display: grid; /* or change to 'flex' if using Flexbox */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* For Grid */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px;
     padding: 20px;
 }
@@ -38,14 +38,16 @@ body {
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 768px) {
-    .item, .flex-item {
+@media (max-width: 375px) {
+    .item {
         padding: 5px; /* Reduce padding on smaller screens */
     }
 }
 
-@media (max-width: 375px) {
-    .container, .flex-container {
-        padding: 5px; /* Reduce container padding on very small screens */
+@media (max-width: 1512px) {
+    .container {
+        max-width: 1200px; /* Limit max-width to prevent overly wide layouts */
+        margin: 0 auto; /* Center align the container */
     }
 }
+
