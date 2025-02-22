@@ -2,14 +2,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 2;
-    margin: 6;
-    padding: 20;
+    margin: 6px; 
+    padding: 20px;
     background: #70c2d5;
 }
 
 .container {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -19,6 +19,16 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
+    transition: filter 0.3s ease; /* Smooth transition for filter */
+}
+
+.item img {
+    width: 100%; /* Ensures the image is responsive within the container */
+    filter: grayscale(100%); /* Makes the image grayscale */
+}
+
+.item:hover img {
+    filter: none; /* Removes the filter on hover to show the image in color */
 }
 
 /* Flexbox specific styles, if using Flexbox for the layout */
@@ -30,7 +40,7 @@ body {
 }
 
 .flex-item {
-    flex: 1 1 200px; /* Grow and shrink starting at 200px */
+    flex: 1 1 200px;
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
@@ -50,4 +60,3 @@ body {
         margin: 0 auto; /* Center align the container */
     }
 }
-
